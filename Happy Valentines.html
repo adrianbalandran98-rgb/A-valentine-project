@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Be my Valentine?</title>
+<style>
+body { 
+  font-family: Arial;
+  text-align: center;
+  padding-top: 120px;
+  
+  background-image: url(https://t4.ftcdn.net/jpg/02/01/28/95/360_F_201289558_RCIMKiSZkHQIrf2nPGERo12wYJZFE1WV.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+ }
+ button {
+    font-size: 20px;
+	padding: 10px 20px;
+	margin: 10px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	
+ }
+ #yesBtn {
+    background: hotpink;
+    color: white;
+  }
+  
+  #noBtn{
+    background: gray;
+    color: white;
+  }
+  </style>
+</head>
+
+<body>
+<h1>Will you be my valentine carolina?</h1>
+
+<button id="yesBtn">Yes</button>
+<button id="noBtn">No</button>
+<script>
+  document.getElementById("yesBtn").onclick = function () {
+  document.body.innerHTML = `
+    <h1 style="color:white; text-align:center;">Really?!🥹💖🔥</h1>
+    
+    <img src="https://media.tenor.com/57tNeM2IyMYAAAAM/rose-cat-cat-with-rose.gif" 
+         style="max-width:80%; border-radius:20px; box-shadow:0 0 20px black; margin-bottom:20px;">
+    
+  <iframe style="border-radius:12px; margin-top:15px;"
+      src="https://open.spotify.com/embed/track/5hTpBe8h35rJ67eAWHQsJx"
+      width="300" height="80"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+    <p style="margin-top:10px;">Press play ▶️</p>
+  `;
+
+
+};
+  document.getElementById("noBtn").onclick = function () {
+    const noBtn = document.getElementById("noBtn");
+
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  };
+</script>
+</body>
+</html>
